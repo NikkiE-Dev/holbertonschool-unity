@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+///<summary>Creating Timer for active gameplay</summary>
 public class Timer : MonoBehaviour
 {
     public static Timer instance;
@@ -51,11 +52,5 @@ public class Timer : MonoBehaviour
 
             yield return null;
         }
-    }
-
-    public void Win()
-    {
-        winner.text = TimerText.text;
-        TimerText.text = "";
     }
 }

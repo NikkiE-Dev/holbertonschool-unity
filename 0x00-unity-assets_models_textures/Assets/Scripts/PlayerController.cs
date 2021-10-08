@@ -1,5 +1,4 @@
 using UnityEngine.UI;
-//using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,8 +14,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _jumpSpeed = 4.5f;
 
-    //[SerializeField]
-    //private float jumpHeight = 2f;
     public Transform respawnPoint;
 
     private CharacterController controller;

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+///<summary>Creating Timer to start once reaches the flag</summary>
 public class WinTrigger : MonoBehaviour
 {
     public Text TimerText;

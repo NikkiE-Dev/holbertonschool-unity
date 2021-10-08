@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>Creating Camera control and angles.</summary>
 public class CameraController : MonoBehaviour
 {
     public Transform Player;
@@ -14,7 +15,6 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        //offset = transform.position - Player.transform.position;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         if (PlayerPrefs.GetInt("isRotated") == 1)
@@ -29,7 +29,6 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        //transform.position = Player.transform.position + offset;
         X += Input.GetAxisRaw("Mouse X");
         if (isRotated)
         {
