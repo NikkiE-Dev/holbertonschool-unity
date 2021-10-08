@@ -1,53 +1,62 @@
-using UnityEngine;
+using UnityEngine.UI;
+//using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 ///<summary>Creating Player.</summary>
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10f;
-    public CharacterController controller;
-    public Rigidbody move;
-    public Vector3 jump;
-    public float jumpForce = 2.0f;
-    public bool isGrounded;
+    [SerializeField]
+    private float _moveSpeed = 7f;
+    [SerializeField]
+    private float _gravity = 8f;
+    [SerializeField]
+    private float _jumpSpeed = 4.5f;
 
+    //[SerializeField]
+    //private float jumpHeight = 2f;
+    public Transform respawnPoint;
 
-    ///<summary>Initializing game</summary>
+    private CharacterController controller;
+
+    public GameObject plyr;
+
+    private float _movingY;
+
+    // Initializing game
     void Start()
     {
-        controller = GetComponent<CharacterController> ();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        controller = GetComponent<CharacterController>();
     }
-
-    void OnCollisionStay()
-         {
-             isGrounded = true;
-         }
-
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("a"))
+        float movementHor = Input.GetAxisRaw("Horizontal");
+        float movementVer = Input.GetAxisRaw("Vertical");
+
+        Vector3 moving = transform.right * movementHor + transform.forward * movementVer;
+
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            move.AddForce(-speed * Time.deltaTime, 0, 0);
+            _movingY = _jumpSpeed;
         }
-        if (Input.GetKey("d"))
+
+        _movingY -= _gravity * Time.deltaTime;
+
+        moving.y = _movingY;
+
+        controller.Move(moving * _moveSpeed * Time.deltaTime);
+    }
+
+
+    void FixedUpdate()
+    {
+        if (plyr.transform.position.y < -30)
         {
-            move.AddForce(speed * Time.deltaTime, 0, 0);
+            plyr.transform.position = respawnPoint.transform.position;
         }
-        if (Input.GetKey("w"))
-        {
-            move.AddForce(0, 0, speed * Time.deltaTime);
-        }
-        if (Input.GetKey("s"))
-        {
-            move.AddForce(0, 0, -speed * Time.deltaTime);
-        }
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            move.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
+
     }
 }
