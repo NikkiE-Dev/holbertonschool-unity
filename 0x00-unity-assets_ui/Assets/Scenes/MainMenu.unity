@@ -1370,6 +1370,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1969441286}
     m_Modifications:
+    - target: {fileID: 1015982602839291067, guid: c5aff02cc5b24a7498f22cb38688641d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3a0cd047c33a904eb5eb27c5a082aaf, type: 3}
     - target: {fileID: 1015982603305963994, guid: c5aff02cc5b24a7498f22cb38688641d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1467,6 +1471,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1969441286}
     m_Modifications:
+    - target: {fileID: 1406720632359843705, guid: ac97e5ab4db7d884bb8f7125be47d3d0, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3a0cd047c33a904eb5eb27c5a082aaf, type: 3}
     - target: {fileID: 1406720632898288474, guid: ac97e5ab4db7d884bb8f7125be47d3d0, type: 3}
       propertyPath: m_Name
       value: OptionsButton
