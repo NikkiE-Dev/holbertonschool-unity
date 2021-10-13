@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
     public void Start()
     {
         TimerText.text = "00:00.00";
+        TimerText.color = Color.white;
         timerGoing = false;
     }
 
