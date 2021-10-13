@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform Player;
 
-    public bool isRotated;
+    public bool isInverted;
     public Vector3 offset;
 
     float X = 0f;
@@ -17,20 +17,20 @@ public class CameraController : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        if (PlayerPrefs.GetInt("isRotated") == 1)
+        if (PlayerPrefs.GetInt("isInverted") == 1)
         {
-            isRotated = true;
+            isInverted = true;
         }
         else
         {
-            isRotated = false;
+            isInverted = false;
         }
     }
 
     void Update()
     {
         X += Input.GetAxisRaw("Mouse X");
-        if (isRotated)
+        if (isInverted)
         {
             Y = Mathf.Clamp(Y + Input.GetAxisRaw("Mouse Y"), -30, 60);
         }

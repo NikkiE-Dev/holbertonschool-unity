@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private float _gravity = 8f;
     [SerializeField]
     private float _jumpSpeed = 4.5f;
+    [SerializeField]
+    private float _jumpMultiplier = 1.15f;
 
     public Transform respawnPoint;
 
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            _movingY = _jumpSpeed;
+            _movingY = _jumpSpeed * _jumpMultiplier;
         }
 
         _movingY -= _gravity * Time.deltaTime;
