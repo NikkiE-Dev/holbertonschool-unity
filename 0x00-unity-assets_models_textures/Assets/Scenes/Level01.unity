@@ -8931,6 +8931,10 @@ PrefabInstance:
       value: TimerCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3223829608925219301, guid: a963aab43f1865f4fb3a38993429c3f2, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223829608925219301, guid: a963aab43f1865f4fb3a38993429c3f2, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
