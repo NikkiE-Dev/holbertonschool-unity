@@ -9,11 +9,18 @@ public class MainMenu : MonoBehaviour
 {
     public void LevelSelect(int level)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("Level" + level.ToString ("00"));
     }
 
     public void Options()
     {
+        PlayerPrefs.SetInt("lastScene", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Options");
+    }
 
+    public void QuitGame()
+    {
+        Debug.Log("Exited");
+        Application.Quit();
     }
 }

@@ -40,6 +40,10 @@ public class Timer : MonoBehaviour
     {
         timerGoing = false;
     }
+    public void Win()
+    {
+        winner.text = TimerText.text;
+    }
 
     private IEnumerator UpdateTimer()
     {
@@ -53,4 +57,5 @@ public class Timer : MonoBehaviour
             yield return null;
         }
     }
+
 }

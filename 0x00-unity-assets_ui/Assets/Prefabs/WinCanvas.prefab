@@ -741,13 +741,15 @@ GameObject:
   - component: {fileID: 5413320213185549467}
   - component: {fileID: 4475601834510825898}
   - component: {fileID: 7701718272197793597}
+  - component: {fileID: 2228581660032428872}
+  - component: {fileID: 1988317089940276608}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &790311709219889310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -829,3 +831,32 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2228581660032428872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627518511050734785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c504174e0e1a734ba08da77394a769a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1988317089940276608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627518511050734785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9ead0af2b69c446a5aba24b9909999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  TimerText: {fileID: 0}
+  WinText: {fileID: 1336746604874945261}
+  TimerCanvas: {fileID: 0}
+  WinCanvas: {fileID: 7627518511050734785}
