@@ -29,11 +29,13 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
     }
+
     // Update is called once per frame
     void Update()
     {
         float movementHor = Input.GetAxisRaw("Horizontal");
         float movementVer = Input.GetAxisRaw("Vertical");
+
 
         Vector3 moving = transform.right * movementHor + transform.forward * movementVer;
 
