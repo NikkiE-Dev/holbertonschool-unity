@@ -41,16 +41,16 @@ public class TyAnimationController : MonoBehaviour
             anime.SetBool("isJumping", false);
         }
     }
-    // void FixedUpdate()
-    // {
-    //     if (Plyr.transform.position.y < -2)
-    //     {
-    //         anime.SetBool("isFalling", true);
-    //     }
-    //     else
-    //     {
-    //         anime.SetBool("isFalling", false);
-    //     }
-    // }
+    void FixedUpdate()
+    {
+        if (Plyr.transform.position.y < -2)
+        {
+            anime.SetBool("isFalling", true);
+        }
+        else
+        {
+            anime.SetBool("isFalling", false);
+        }
+    }
 
 }

@@ -3,7 +3,12 @@ guid: d8ba9d909c9d23248ad8f4fcbce91b4a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MainCam: {instanceID: 0}
+  - CutsceneCam: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - TimerCanvas: {instanceID: 0}
+  - Ani: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
