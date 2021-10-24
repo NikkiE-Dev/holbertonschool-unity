@@ -12,6 +12,8 @@ public class TyAnimationController : MonoBehaviour
     public bool isFalling;
     public bool isRunning;
     public bool IsJumping;
+    public AudioSource RunSound;
+    public AudioSource LandingSound;
 
     void Start()
     {
@@ -26,10 +28,12 @@ public class TyAnimationController : MonoBehaviour
         if (movementHor !=0 || movementVer != 0)
         {
             anime.SetBool("isRunning", true);
+            RunSound.Play();
         }
         else
         {
             anime.SetBool("isRunning", false);
+            RunSound.Stop();
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -39,6 +43,10 @@ public class TyAnimationController : MonoBehaviour
         else
         {
             anime.SetBool("isJumping", false);
+        }
+        if (anime.GetCurrentAnimatorStateInfo(0).IsName("Falling Flat Impact"))
+        {
+            LandingSound.Play();
         }
     }
     void FixedUpdate()

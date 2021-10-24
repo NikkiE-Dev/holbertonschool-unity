@@ -12,6 +12,8 @@ public class WinTrigger : MonoBehaviour
     public Text WinText;
     public GameObject TimerCanvas;
     public GameObject WinCanvas;
+    public AudioSource WinSound;
+    public GameObject Lvl1Music;
 
 
     void OnTriggerEnter(Collider other)
@@ -21,12 +23,13 @@ public class WinTrigger : MonoBehaviour
             Timer.instance.EndTimer();
             player.GetComponent<Timer>().Win();
             // Timer.instance.Win();
-            Debug.Log ("Returnd from winscript");
+            Debug.Log ("Returned from Winscript");
             Cursor.visible = true;
             TimerCanvas.SetActive(false);
             WinCanvas.SetActive(true);
             Debug.Log ("WinCanvas should be true");
-
+            Lvl1Music.SetActive(false);
+            WinSound.Play();
         }
     }
 }

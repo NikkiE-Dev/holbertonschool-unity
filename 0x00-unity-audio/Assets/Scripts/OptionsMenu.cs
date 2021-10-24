@@ -10,6 +10,8 @@ public class OptionsMenu : MonoBehaviour
     public Toggle invertY;
     public Button backButton;
     public Button applyButton;
+    public AudioSource audioSource;
+
 
     void Start()
     {
@@ -34,5 +36,9 @@ public class OptionsMenu : MonoBehaviour
         }
        PlayerPrefs.Save();
        SceneManager.LoadScene(PlayerPrefs.GetInt("lastScene"));
+    }
+    public void UpdateVolume(float volume)
+    {
+        audioSource.volume = volume;
     }
 }
