@@ -18,6 +18,8 @@ public class TyAnimationController : MonoBehaviour
     void Start()
     {
         anime = GetComponent<Animator>();
+        RunSound.mute = true;
+        LandingSound.mute = true;
     }
 
     void Update()
@@ -27,26 +29,37 @@ public class TyAnimationController : MonoBehaviour
 
         if (movementHor !=0 || movementVer != 0)
         {
+            isRunning = true;
             anime.SetBool("isRunning", true);
-            RunSound.Play();
+            RunSound.mute = false;
         }
         else
         {
+            isRunning = false;
             anime.SetBool("isRunning", false);
-            RunSound.Stop();
+            RunSound.mute = true;
         }
 
         if (Input.GetButtonDown("Jump"))
         {
             anime.SetBool("isJumping", true);
         }
+        else if (IsJumping == true && isRunning == true)
+        {
+            RunSound.mute = true;
+        }
         else
         {
             anime.SetBool("isJumping", false);
         }
+
         if (anime.GetCurrentAnimatorStateInfo(0).IsName("Falling Flat Impact"))
         {
-            LandingSound.Play();
+            LandingSound.mute = false;
+        }
+        else
+        {
+            LandingSound.mute = true;
         }
     }
     void FixedUpdate()

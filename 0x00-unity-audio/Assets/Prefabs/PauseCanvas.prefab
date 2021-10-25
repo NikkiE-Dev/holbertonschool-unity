@@ -596,6 +596,8 @@ MonoBehaviour:
   restartButton: {fileID: 0}
   menuButton: {fileID: 0}
   optionsButton: {fileID: 0}
+  paused: {fileID: 0}
+  unpaused: {fileID: 0}
 --- !u!1 &832659686966288760
 GameObject:
   m_ObjectHideFlags: 0

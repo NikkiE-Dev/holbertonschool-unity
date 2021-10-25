@@ -97,24 +97,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2334657471413935415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5365570492106678843}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18766257f3906a5479e65de198bd72e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Plyr: {fileID: 425554481906587057}
-  isFalling: 0
-  isRunning: 0
-  IsJumping: 0
-  RunSound: {fileID: 2760465420840590768, guid: 0e09e899006f2044aa05e21940b5bbf7, type: 3}
-  LandingSound: {fileID: 903592636792952898, guid: ea1905c6184cde64ab01d338f455838c, type: 3}
 --- !u!1001 &5095607744058826602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,11 +158,6 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 35653998e23ff7142b3b325cae12b66d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ff8e8743a41dd46ba6c1a365288ee9, type: 3}
---- !u!1 &5365570492106678843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0ff8e8743a41dd46ba6c1a365288ee9, type: 3}
-  m_PrefabInstance: {fileID: 5095607744058826602}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4701060111637313665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0ff8e8743a41dd46ba6c1a365288ee9, type: 3}

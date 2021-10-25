@@ -24,8 +24,8 @@ public class OptionsMenu : MonoBehaviour
         invertY.isOn = PlayerPrefs.GetInt("invertY") == 1;
         backButton.onClick.AddListener(Back);
         applyButton.onClick.AddListener(Apply);
-        // bgm.value = PlayerPrefs.GetFloat("bgm", 1);
-        // sfx.value = PlayerPrefs.GetFloat("sfx", 1);
+        BGM.value = PlayerPrefs.GetFloat("BGMvol", 1);
+        SFX.value = PlayerPrefs.GetFloat("SFXvol", 1);
     }
     public void Back()
     {
@@ -46,16 +46,24 @@ public class OptionsMenu : MonoBehaviour
        SceneManager.LoadScene(PlayerPrefs.GetInt("lastScene"));
     }
 
-    public void SetBGMlvl(float BGMvol)
+    public void SetBGM(float sliderValue)
     {
-        masterMixer.SetFloat("BGMvol", Mathf.Log10(BGMvol) * 20);
-        PlayerPrefs.SetFloat("BGMvol", BGMvol);
+        bgmSlider = sliderValue;
+        masterMixer.SetFloat("BGMvol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("BGMvol", sliderValue);
     }
-    public void SetSFXlvl(float SFXvol)
+    // {
+    //     masterMixer.SetFloat("BGMvol", Mathf.Log10(BGMvol) * 20);
+    //     PlayerPrefs.SetFloat("BGMvol", BGMvol);
+    // }
+    public void SetSFX(float sliderValue)
     {
-        masterMixer.SetFloat("SFXvol", Mathf.Log10(SFXvol) * 20);
-        PlayerPrefs.SetFloat("SFXvol", SFXvol);
+        sfxSlider = sliderValue;
+        masterMixer.SetFloat("SFXvol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("SFXvol", sliderValue);
     }
-
-
+    // {
+    //     masterMixer.SetFloat("SFXvol", Mathf.Log10(SFXvol) * 20);
+    //     PlayerPrefs.SetFloat("SFXvol", SFXvol);
+    // }
 }

@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 ///<summary>Creating Pause Menu</summary>
 public class PauseMenu : MonoBehaviour
@@ -14,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     public Button restartButton;
     public Button menuButton;
     public Button optionsButton;
+    public AudioMixerSnapshot paused;
+    public AudioMixerSnapshot unpaused;
 
     void Start()
     {
@@ -49,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        paused.TransitionTo(.01f);
         GameIsPaused = true;
     }
     public void Resume()
@@ -56,23 +60,27 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        unpaused.TransitionTo(.01f);
         GameIsPaused = false;
     }
     public void Restart()
     {
         Cursor.lockState = CursorLockMode.Locked;
         GameIsPaused = false;
+        unpaused.TransitionTo(.01f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        unpaused.TransitionTo(.01f);
         GameIsPaused = false;
         SceneManager.LoadScene("MainMenu");
     }
     public void Options()
     {
+        unpaused.TransitionTo(.01f);
         Time.timeScale = 1f;
         GameIsPaused = false;
         PlayerPrefs.SetInt("lastScene", SceneManager.GetActiveScene().buildIndex);
