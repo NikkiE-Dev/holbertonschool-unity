@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 ///<summary>Creating Options Menu.</summary>
 public class OptionsMenu : MonoBehaviour
@@ -10,7 +11,12 @@ public class OptionsMenu : MonoBehaviour
     public Toggle invertY;
     public Button backButton;
     public Button applyButton;
-    public AudioSource audioSource;
+    public Slider BGM;
+    public static float bgmSlider;
+
+    public Slider SFX;
+    public static float sfxSlider;
+    public AudioMixer masterMixer;
 
 
     void Start()
@@ -18,6 +24,8 @@ public class OptionsMenu : MonoBehaviour
         invertY.isOn = PlayerPrefs.GetInt("invertY") == 1;
         backButton.onClick.AddListener(Back);
         applyButton.onClick.AddListener(Apply);
+        // bgm.value = PlayerPrefs.GetFloat("bgm", 1);
+        // sfx.value = PlayerPrefs.GetFloat("sfx", 1);
     }
     public void Back()
     {
@@ -37,8 +45,17 @@ public class OptionsMenu : MonoBehaviour
        PlayerPrefs.Save();
        SceneManager.LoadScene(PlayerPrefs.GetInt("lastScene"));
     }
-    public void UpdateVolume(float volume)
+
+    public void SetBGMlvl(float BGMvol)
     {
-        audioSource.volume = volume;
+        masterMixer.SetFloat("BGMvol", Mathf.Log10(BGMvol) * 20);
+        PlayerPrefs.SetFloat("BGMvol", BGMvol);
     }
+    public void SetSFXlvl(float SFXvol)
+    {
+        masterMixer.SetFloat("SFXvol", Mathf.Log10(SFXvol) * 20);
+        PlayerPrefs.SetFloat("SFXvol", SFXvol);
+    }
+
+
 }

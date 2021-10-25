@@ -3384,7 +3384,9 @@ MonoBehaviour:
   invertY: {fileID: 2337593139659305372, guid: dc6e2deda7396654a8e9488a78e8b2bc, type: 3}
   backButton: {fileID: 5797302112613337507, guid: e880ca75612817d48aad3eef01517e86, type: 3}
   applyButton: {fileID: 4909349127631309476, guid: d343adab13f8c1c4db98e12cf19323ba, type: 3}
-  audioSource: {fileID: 0}
+  BGM: {fileID: 0}
+  SFX: {fileID: 0}
+  masterMixer: {fileID: 0}
 --- !u!114 &633971104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11179,6 +11181,10 @@ PrefabInstance:
     - target: {fileID: 1541294279159468757, guid: 1e5fff5b913cb14458b216106f4166f1, type: 3}
       propertyPath: m_Name
       value: CheeryMonday
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541294279159468757, guid: 1e5fff5b913cb14458b216106f4166f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5fff5b913cb14458b216106f4166f1, type: 3}
