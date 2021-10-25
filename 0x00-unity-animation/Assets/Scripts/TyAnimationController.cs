@@ -13,6 +13,7 @@ public class TyAnimationController : MonoBehaviour
     public bool isRunning;
     public bool IsJumping;
 
+
     void Start()
     {
         anime = GetComponent<Animator>();
