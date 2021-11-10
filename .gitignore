@@ -57,3 +57,8 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+0x00-unity_ar_business_card/Assets/Editor/Migration/com.ptc.vuforia.engine-10.2.5.tgz
+0x00-unity_ar_business_card/Library/ArtifactDB
+0x00-unity_ar_business_card/Library/PackageCache/com.ptc.vuforia.engine@d6eb8dfeec12-1632536113000/Vuforia/Plugins/OSXUniversal/x86_64/VuforiaEngine.bundle/Contents/MacOS/VuforiaEngine
+0x00-unity_ar_business_card\Library\PackageCache\com.ptc.vuforia.engine@d6eb8dfeec12-1632536113000\Vuforia\Plugins\iOS\VuforiaEngine.framework\VuforiaEngine
+0x00-unity_ar_business_card\Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@0.1.21-preview\data~\payload.tar.7z
