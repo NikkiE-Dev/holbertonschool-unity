@@ -1,0 +1,20 @@
+{
+"instructions_readme": "1) Open Chrome, 2) go to chrome://tracing, 3) click Load, 4) navigate to this file.",
+
+"traceEvents":[
+{ "pid": "Unity", "ph":"M", "name": "process_name", "args": {"name": "Unity"} },
+{ "pid": "Unity", "ph":"M", "name": "process_sort_index", "args": {"sort_index": -100} },
+{ "pid": "Unity", "tid": 1, "ph":"M", "name": "thread_name", "args": {"name": ""} },
+{ "pid": "Unity", "tid": 1,"ts": 1.637017120016E+15,"dur": 12936000, "ph":"X", "name": "Build player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.637017120226E+15,"dur": 74000, "ph":"X", "name": "Preprocess Player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.637017120441E+15,"dur": 12442000, "ph":"X", "name": "Prepare For Build"},
+{}
+
+],
+"meta_datetime": "11/15/2021 16:58:52",
+"meta_command_line": "/Applications/Unity/Unity.app/Contents/MacOS/Unity -projectpath /Users/2495/Documents/GitHub/holbertonschool-unity/0x00-unity_ar_business_card -useHub -hubIPC -cloudEnvironment production -hubSessionId 1ea761a0-43cf-11ec-ab9c-af14f6576dc6 -accessToken dkXITnCaFXD27JRGGhoD1AL3FhxiswMBQyGmjLRTEpE002f -projectpath /Users/2495/0x00-unity_ar_business_card -useHub -hubIPC -cloudEnvironment production -hubSessionId 1ea761a0-43cf-11ec-ab9c-af14f6576dc6 -accessToken CPIC8AotikYqBKkD08dU83vpmQ6vjVIEMnead_byTq4002f",
+"meta_command_line_args": "/Applications/Unity/Unity.app/Contents/MacOS/Unity -projectpath /Users/2495/Documents/GitHub/holbertonschool-unity/0x00-unity_ar_business_card -useHub -hubIPC -cloudEnvironment production -hubSessionId 1ea761a0-43cf-11ec-ab9c-af14f6576dc6 -accessToken dkXITnCaFXD27JRGGhoD1AL3FhxiswMBQyGmjLRTEpE002f -projectpath /Users/2495/0x00-unity_ar_business_card -useHub -hubIPC -cloudEnvironment production -hubSessionId 1ea761a0-43cf-11ec-ab9c-af14f6576dc6 -accessToken CPIC8AotikYqBKkD08dU83vpmQ6vjVIEMnead_byTq4002f",
+"meta_user_name": "2495",
+"meta_os_version": "Unix 19.6.0.0",
+"meta_cpu_count": "6"
+}
