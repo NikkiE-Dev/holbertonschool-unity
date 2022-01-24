@@ -1,0 +1,4 @@
+#Mon Jan 24 14:37:16 CST 2022
+base.0=/Users/2495/Documents/GitHub/holbertonschool-unity/0x00-unity-ar_slingshot_game/Temp/gradleOut/launcher/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -71,7 +71,8 @@ crashlytics-build.properties
 0x00-unity_ar_business_card/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@0.1.22-preview/data~/payload.tar.7z
 0x00-unity_ar_business_card/Library/PackageCache/com.ptc.vuforia.engine@b44960a3fbec-1632536113000/Vuforia/Plugins/iOS/VuforiaEngine.framework/VuforiaEngine
 
-
+# Large files (AR Slingshot)
+0x00-unity-ar_slingshot_game/Library/PackageCache/com.unity.toolchain.macos-x86_64-linux-x86_64@1.0.0/data~/payload.tar.7z
 
 
 
